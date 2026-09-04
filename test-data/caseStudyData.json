@@ -1,0 +1,25 @@
+{
+    "workOrderId": "W-9700",
+    "estimatedMinutes": 24,
+    "description": "Case study automation test",
+    "jobName": "PdM TECH SO-Fluid Analysis",
+    "quantity": 2,
+
+
+    "multipleCaseStudies": [
+        {
+            "workOrderId": "W-9703",
+            "estimatedMinutes": 30,
+            "description": "Case study automation test one",
+            "jobName": "PdM TECH SO-Fluid Analysis",
+            "quantity": 2
+        },
+        {
+            "workOrderId": "W-9704",
+            "estimatedMinutes": 45,
+            "description": "Case study automation test two",
+            "jobName": "PdM TECH SO-Fluid Analysis",
+            "quantity": 3
+        }
+    ]
+}
