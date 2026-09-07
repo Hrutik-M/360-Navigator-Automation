@@ -1,0 +1,96 @@
+{
+  "caseStudyAnalysisPage": {
+    "pageTitle": "Case Study Analysis",
+    "browserTitle": "360 Navigator PMO",
+    "expectedUrl": "https://www.360performancenavigator.com/wom-dd-wm-dashboard",
+    "maxLoadTime": 3000
+  },
+  "sidebarMenuItems": [
+    "Home",
+    "Administrator",
+    "Centralized Management",
+    "Command Center",
+    "Strategy & Operations",
+    "Reliability Asset Strategies",
+    "Reliability Engineering",
+    "Work Management",
+    "CMMS Data Quality",
+    "MRO Storeroom",
+    "OpEx Reliability",
+    "Fleet Management",
+    "Vendor Management"
+  ],
+  "navigationPath": {
+    "level1": "Work Management",
+    "level2": "GEMBA Craft Productivity",
+    "level3": "Case Study Analysis"
+  },
+  "highlightedMenuItem": "Work Management",
+  "sites": [
+    "PNQ",
+    "PUNE"
+  ],
+  "tableColumns": [
+    "SITE",
+    "WORK ORDER",
+    "DESCRIPTION",
+    "DEVIATION",
+    "PRODUCTIVITY",
+    "WORK TYPE",
+    "TY"
+  ],
+  "expectedTableRowCount": 43,
+  "charts": {
+    "donutChart": {
+      "name": "WORK ORDER PRODUCTIVITY",
+      "expectedValue": "32.59%"
+    },
+    "barChart": {
+      "name": "PRODUCTIVITY BY SAMPLE TYPE",
+      "categories": ["Actual", "Reflected", "Simulated"],
+      "expectedValues": [67, 33, 8]
+    },
+    "laborConversionChart": {
+      "name": "CM LABOR CONVERSION NET YIELD",
+      "expectedValues": {
+        "utilization": "64.14%",
+        "productivity": "32.49%",
+        "yield": "20.84%"
+      }
+    },
+    "delayAnalysisChart": {
+      "name": "DELAY ANALYSIS - MUDA 8 WASTES",
+      "wastes": [
+        "Scrap",
+        "Transportation",
+        "Skills",
+        "Defects",
+        "Overproduction",
+        "Overprocessing",
+        "Waiting",
+        "Motion",
+        "Inventory"
+      ]
+    },
+    "delayMinutesChart": {
+      "name": "ALL DELAY - MINUTES",
+      "categories": ["Man", "Method", "Materials", "Management", "Machine"],
+      "expectedValues": {
+        "man": 1673,
+        "method": 2167,
+        "materials": 2077,
+        "management": 512,
+        "machine": 645
+      }
+    }
+  },
+  "tabs": {
+    "taskAnalysis": "Task Analysis",
+    "sankey": "Sankey"
+  },
+  "buttons": {
+    "toggleGraph": "Toggle Graph",
+    "reset": "Reset",
+    "applyFilter": "Apply Filter"
+  }
+}

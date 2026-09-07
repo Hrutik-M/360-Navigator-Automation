@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "@playwright/test"
+    ],
+    "strict": true
+  },
+  "include": [
+    "Pages/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.4.1",
+    "dotenv": "^17.4.2"
+  },
+  "scripts": {}
+}
