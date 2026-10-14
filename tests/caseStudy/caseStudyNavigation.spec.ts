@@ -1,36 +1,12 @@
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../Pages/LoginPage';
-import { DashboardPage } from '../../Pages/DashboardPage';
+import { test, expect } from '../fixtures/authenticatedTest';
 import { CaseStudyAnalysisPage } from '../../Pages/CaseStudyAnalysisPage';
-import dotenv from 'dotenv';
-import loginData from '../../test-data/loginData.json';
 import caseStudyAnalysisData from '../../test-data/caseStudyAnalysisData.json';
 
-dotenv.config();
-
 test.describe('Case Study Analysis - Navigation & Page Load', () => {
-  let loginPage: LoginPage;
-  let dashboardPage: DashboardPage;
   let caseStudyAnalysisPage: CaseStudyAnalysisPage;
 
-  test.beforeEach(async ({ page }) => {
-    loginPage = new LoginPage(page);
-    dashboardPage = new DashboardPage(page);
-    caseStudyAnalysisPage = new CaseStudyAnalysisPage(page);
-
-    // Login before each test
-    const password = process.env.PASSWORD;
-    if (!password) {
-      throw new Error('PASSWORD environment variable is not set');
-    }
-
-    await loginPage.openLoginPage();
-    await loginPage.login(
-      loginData.accessCode,
-      loginData.username,
-      password
-    );
-    await dashboardPage.verifyDashboardLoaded();
+  test.beforeEach(async ({ authenticatedPage }) => {
+    caseStudyAnalysisPage = new CaseStudyAnalysisPage(authenticatedPage);
   });
 
   test('TC-001: Verify Case Study Analysis page loads correctly', async () => {

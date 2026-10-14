@@ -178,6 +178,11 @@ class CaseStudyAnalysisPage extends BasePage {
     await this.page.waitForLoadState('networkidle');
   }
 
+  async selectSiteAndApplyFilter(siteName: string): Promise<void> {
+    await this.selectSite(siteName);
+    await this.applyFilter();
+  }
+
   async getTableText(): Promise<string> {
     return await this.dataTable.textContent() || '';
   }
