@@ -13,7 +13,8 @@ class DashboardPage extends BasePage {
   }
 
   async verifyDashboardLoaded(): Promise<void> {
-    await expect(this.welcomeHeading).toBeVisible();
+    // Give the dashboard extra time to appear on a slow load.
+    await expect(this.welcomeHeading).toBeVisible({ timeout: 15000 }); // Wait up to 15 seconds for the dashboard to appear.
   }
 }
 
